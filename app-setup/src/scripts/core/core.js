@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('caidfLauncherAppSetup', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.ace', 'kiwapp.api'])
+angular.module('boilerplateKiwappSetup', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'kiwapp.api'])
     .controller('MainCtrl', require('./controllers/main'))
     .factory('AppInstanceFactory', require('./factory/appInstanceFactory'))
     .config(function ($stateProvider, $urlRouterProvider) {

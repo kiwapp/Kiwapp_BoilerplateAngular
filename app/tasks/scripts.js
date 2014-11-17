@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     ngAnnotate = require('gulp-ng-annotate');
 
 /**
- * Create a single file app.js
+ * Create a single file app.js with all js dependencies (we use bowerify who read the require word in file for making the link between files)
  */
 module.exports = function () {
 

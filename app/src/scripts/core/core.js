@@ -1,10 +1,7 @@
 'use strict';
-require('../widgets/widgets')
 
-angular.module('caidfLauncher', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'widgets', 'ui.bootstrap'])
-    .directive("kwWidgetsBloc", require('./directives/kwWidgetsBloc'))
+angular.module('boilerplateKiwapp', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap'])
     .controller('MainCtrl', require('./controllers/MainCtrl'))
-    .controller('PageModalController', require('./controllers/PageModalController'))
     .config(function ($stateProvider, $urlRouterProvider) {
 
         /**
@@ -18,7 +15,6 @@ angular.module('caidfLauncher', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.route
             });
 
         $urlRouterProvider.otherwise('/');
-
 
         /**
          * Kiwapp configuration

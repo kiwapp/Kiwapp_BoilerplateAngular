@@ -1,17 +1,19 @@
-var fs = require('fs'),
-    gulp = require('gulp'),
+var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 /**
- * Build vendor, Concat and build our dependencies
+ * Concat your dependencies (js or css)
  */
 module.exports = function () {
 
+    // Folder with all dependencies
     var appDepenpendencies = './src/vendor';
 
+    // The css dependencies
     gulp.src(appDepenpendencies + '/bootstrap/dist/css/bootstrap.css')
         .pipe(gulp.dest('build/styles'));
 
+    // The js dependencies
     return gulp.src([
         appDepenpendencies + '/angular/angular.min.js',
         appDepenpendencies + '/angular-animate/angular-animate.min.js',
@@ -25,6 +27,5 @@ module.exports = function () {
     ])
         .pipe(concat('vendor.min.js', {newLine: ';'}))
         .pipe(gulp.dest('build/js'));
-
 
 };

@@ -1,6 +1,10 @@
-# Crédit Agricole - Launcher
+# Boilerplate
+
+Copy this project for init a new project (don't forget to remove the .git folder)
 
 ## Release Note :
+
+-> Insert your release note here
 
 ### 1.0.0 (in development)
 
@@ -21,6 +25,7 @@
 - kiwapp.js
 - angular (angular core, angular router, angular sanitize, angular bootstrap, angular touch)
 - jquery
+- babelfish
 
 ### Usage
 
@@ -65,3 +70,12 @@ Availables gulp commands :
     ```
     
     Your application will be available at the http://localhost:8080/build
+    
+### Translation
+
+For the translation we use the babelfish module (https://github.com/dhoko/angular-ngBabelfish)
+
+## Add somes features
+
+
+

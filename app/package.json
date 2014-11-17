@@ -1,7 +1,7 @@
 {
-  "name": "CAIdf-Laucher",
+  "name": "Boilerplate Kiwapp",
   "version": "0.0.1",
-  "description": "L'application launcher HTML5 réalisé pour le Crédit Agricole. Elle est utilisée dans le cadre de la digitalisation des agences",
+  "description": "Le boilerplate pour toutes les applications Kiwapp utilisant angularjs",
   "author": "Kiwapp",
   "readmeFilename": "Readme.md",
   "devDependencies": {

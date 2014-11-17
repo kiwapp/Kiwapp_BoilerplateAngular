@@ -3,7 +3,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat');
 
 /**
- * Concat our CSS
+ * Concat our CSS and build the sass file
  */
 module.exports = function () {
 

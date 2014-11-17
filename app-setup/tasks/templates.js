@@ -7,8 +7,7 @@ module.exports = function() {
     return gulp.src('./src/scripts/**/*.html')
         .pipe(htmlify())
         .pipe(templateCache('templates.js', {
-            root: '',
-            module: 'caidfLauncherAppSetup'
+            module: 'boilerplateKiwappSetup'
         }))
         .pipe(gulp.dest('./build/js'));
 }

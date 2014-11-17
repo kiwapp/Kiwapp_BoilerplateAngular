@@ -1,4 +1,4 @@
-# Boilerplate
+# Boilerplate AngularJS
 
 Copy this project for init a new project (don't forget to remove the .git folder)
 
@@ -7,6 +7,7 @@ Copy this project for init a new project (don't forget to remove the .git folder
 -> Insert your release note here
 
 ### 1.0.0 (in development)
+ - Start the project
 
 ## How does it work ?
 
@@ -74,8 +75,6 @@ Availables gulp commands :
 ### Translation
 
 For the translation we use the babelfish module (https://github.com/dhoko/angular-ngBabelfish)
-
-## Add somes features
 
 
 

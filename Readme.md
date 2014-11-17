@@ -1,4 +1,4 @@
-# Crédit Agricole - Launcher
+# Boilerplate AngularJS
  
 ## The application
  

@@ -1,4 +1,4 @@
-# Crédit Agricole - Launcher (the micro backoffice application app-setup) 
+# Boilerplate AngularJS - (the micro backoffice application app-setup) 
  
 ## Why use a mbo app-setup?
 

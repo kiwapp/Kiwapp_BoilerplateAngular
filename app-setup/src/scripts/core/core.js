@@ -1,9 +1,10 @@
 'use strict';
 
-angular.module('boilerplateKiwappSetup', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'kiwapp.api'])
-    .controller('MainCtrl', require('./controllers/main'))
+angular.module('boilerplateKiwappSetup', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngBabelfish', 'ui.router', 'kiwapp.api'])
+    .controller('MainCtrl', require('./controllers/MainCtrl'))
     .factory('AppInstanceFactory', require('./factory/appInstanceFactory'))
-    .config(function ($stateProvider, $urlRouterProvider) {
+
+    .config(function ($stateProvider, $urlRouterProvider, babelfishProvider) {
 
         $stateProvider
             .state('home', {
@@ -18,6 +19,15 @@ angular.module('boilerplateKiwappSetup', ['ngAnimate', 'ngTouch', 'ngSanitize', 
                 }});
 
         $urlRouterProvider.otherwise('/');
+
+        // Init the babelfish module for the translation
+        babelfishProvider.init({
+            state: "home",
+            lang: "en-EN",
+            url: "i18n/languages.json",
+            namespace: "i18n",
+            lazy: false
+        });
     })
 ;
 

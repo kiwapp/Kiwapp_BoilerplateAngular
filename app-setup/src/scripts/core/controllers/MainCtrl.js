@@ -3,7 +3,6 @@
 module.exports = function ($scope, appInstanceDataApi, AppInstanceData) {
 
     // Use JSON.stringify and parse, this will be prettify the JSON
-    console.log(AppInstanceData)
     $scope.text = JSON.stringify(JSON.parse(AppInstanceData.data[0].data),null, 4);
 
     // Watch the text model
@@ -22,7 +21,6 @@ module.exports = function ($scope, appInstanceDataApi, AppInstanceData) {
      * Save the data
      */
     $scope.save = function() {
-        console.log("Save");
         $scope.configForm.$setSubmitted(true);
         $scope.configForm.$setDirty(false);
         appInstanceDataApi.update(JSON.stringify(JSON.parse($scope.text)), 'app-params');

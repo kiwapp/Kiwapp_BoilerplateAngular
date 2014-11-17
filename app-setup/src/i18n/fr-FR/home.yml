@@ -1,0 +1,4 @@
+btn_save: Sauvegarder la configuration
+msg_saved: La configuration est sauvegardée
+msg_unsaved: La configuration n'est pas sauvegardée
+msg_json_invalid: Le JSON est invalide

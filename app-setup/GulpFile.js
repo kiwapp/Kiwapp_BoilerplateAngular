@@ -20,6 +20,9 @@ gulp.task('index', require("./tasks/index"));
 // Move our assets
 gulp.task('assets', require('./tasks/assets'));
 
+// Build your i18n files
+gulp.task('i18n', require('./tasks/i18n'));
+
 /*******
  * Main TASKS
  */
@@ -28,7 +31,7 @@ gulp.task('assets', require('./tasks/assets'));
 gulp.task('prod', ['dev']);
 
 // Dev build
-gulp.task('dev', ['index', 'assets', 'vendor', 'templates', 'styles', 'scripts']);
+gulp.task('dev', ['index', 'assets', 'vendor', 'templates', 'i18n', 'styles', 'scripts']);
 
 // Dev build + add the watch and the livereload on the sources
 gulp.task('serve', ['dev', 'watch'], function () {
@@ -54,6 +57,9 @@ gulp.task('watch', function () {
         gulp.src(file.path).pipe(connect.reload());
     });
     gulp.watch('src/index.html', ['index']).on('change', function (file) {
+        gulp.src(file.path).pipe(connect.reload());
+    });
+    gulp.watch('src/i18n/**', ['i18n']).on('change', function (file) {
         gulp.src(file.path).pipe(connect.reload());
     });
 });

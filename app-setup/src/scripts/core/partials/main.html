@@ -1,0 +1,11 @@
+<form name="configForm">
+    <textarea ng-model="text" ng-change="update()"></textarea>
+
+    <div class="bloc-valid">
+        <span class="config-info config-unsave" ng-if="configForm.$dirty && !configForm.$submitted && configForm.valid">La configuration n'est pas sauvegardée</span>
+        <span class="config-info config-save" ng-if="configForm.$dirty && configForm.$submitted && configForm.valid">La configuration est sauvegardée</span>
+        <span class="config-info config-invalid" ng-if="!configForm.valid">Le JSON est invalide</span>
+        <button type="button" ng-disabled="!configForm.valid" ng-click="save()">Sauvegarder la configuration</button>
+    </div>
+
+</form>

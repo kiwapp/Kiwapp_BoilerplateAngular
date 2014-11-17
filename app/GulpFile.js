@@ -28,6 +28,8 @@ gulp.task('mbo', require('./tasks/mbo'));
 // Task all files in the /app folder and zip them
 gulp.task('zip', require('./tasks/zip'));
 
+// Build your i18n files
+gulp.task('i18n', require('./tasks/i18n'));
 
 /*******
  * Main TASKS
@@ -38,7 +40,7 @@ gulp.task('prod', ['mbo', 'dev', 'manifest'], function () {
 });
 
 // Dev build
-gulp.task('dev', ['index', 'assets', 'vendor', 'templates', 'styles', 'scripts']);
+gulp.task('dev', ['index', 'assets', 'vendor', 'templates', 'i18n', 'styles', 'scripts']);
 
 // Dev build + add the watch and the livereload on the sources
 gulp.task('serve', ['dev', 'watch'], function () {
@@ -64,6 +66,9 @@ gulp.task('watch', function () {
         gulp.src(file.path).pipe(connect.reload());
     });
     gulp.watch('src/index.html', ['index']).on('change', function (file) {
+        gulp.src(file.path).pipe(connect.reload());
+    });
+    gulp.watch('src/i18n/**', ['i18n']).on('change', function (file) {
         gulp.src(file.path).pipe(connect.reload());
     });
 });

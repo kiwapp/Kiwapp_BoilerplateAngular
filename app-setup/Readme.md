@@ -34,7 +34,7 @@ $ npm install && bower install
 Availables gulp commands :
 
  
- - Launch production build with the version specified in the manifest.json
+ - Launch production build
  
     ```shell
     $ gulp prod
@@ -45,13 +45,6 @@ Availables gulp commands :
     ```shell
     $ gulp
     ```
-    
-- Launch production build with a version number (this command line will build a .zip file with the resource under the build folder)
- 
-    ```shell
-    $ gulp prod --version 1.0.1
-    ```
-
 
 - Launch the dev build
 

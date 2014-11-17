@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('boilerplateKiwapp', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap'])
+angular.module('boilerplateKiwapp', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ngBabelfish'])
     .controller('MainCtrl', require('./controllers/MainCtrl'))
-    .config(function ($stateProvider, $urlRouterProvider) {
+    .config(function ($stateProvider, $urlRouterProvider, babelfishProvider) {
 
         /**
          * Angular application configuration
@@ -22,6 +22,17 @@ angular.module('boilerplateKiwapp', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.r
 
         // No rotation (this application is mode landscape only)
         Kiwapp.rotate(0);
+
+        /**
+         * The provider the the traductor module (we use here babelfish)
+         */
+        babelfishProvider.init({
+            state: "home",
+            lang: "fr-FR",
+            url: "i18n/languages.json",
+            namespace: "i18n",
+            lazy: false
+        });
 
     })
 ;

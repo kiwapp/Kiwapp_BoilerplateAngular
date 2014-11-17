@@ -22,7 +22,8 @@ module.exports = function () {
         appDepenpendencies + '/angular-ui-router/release/angular-ui-router.min.js',
         appDepenpendencies + '/moment/moment.js',
         appDepenpendencies + '/kiwapp.js/kiwapp.js',
-        appDepenpendencies + '/angular-bootstrap/ui-bootstrap-tpls.min.js'
+        appDepenpendencies + '/angular-bootstrap/ui-bootstrap-tpls.min.js',
+        appDepenpendencies + '/ngBabelfish/dist/bundle.js'
 
     ])
         .pipe(concat('vendor.min.js', {newLine: ';'}))

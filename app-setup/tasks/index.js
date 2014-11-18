@@ -1,6 +1,6 @@
 var gulp   = require('gulp');
 
 module.exports = function() {
-    return gulp.src('./src/index.html')
+    return gulp.src('./src/*')
         .pipe(gulp.dest('./build/'));
 };

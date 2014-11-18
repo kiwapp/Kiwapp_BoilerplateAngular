@@ -1,4 +1,4 @@
-# Boilerplate AngularJS
+# AngularJS
  
 ## The application
  

@@ -1,7 +1,7 @@
 {
-    "name": "Boilerplate Kiwapp",
+    "name": "<%%=displayName%>",
     "version": "0.0.1",
-    "homepage": "https://github.com/procheo/boilerplateAngular/app",
+    "homepage": "https://github.com/procheo/<%%=applicationName%>/app",
     "authors": ["kiwapp <contact@kiwapp.com>"],
     "license": "MIT",
     "private": true,

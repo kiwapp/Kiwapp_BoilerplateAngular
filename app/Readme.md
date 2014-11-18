@@ -1,6 +1,12 @@
-# Boilerplate AngularJS
+# <%%=displayName%>
 
 Copy this project for init a new project (don't forget to remove the .git folder)
+And run the commands
+```shell
+$ npm install && gulp init
+```
+
+The command gulp init will ask to you the application name and after that your project is ready to use
 
 ## Release Note :
 
@@ -33,7 +39,7 @@ Copy this project for init a new project (don't forget to remove the .git folder
 For install all dev dependencies (npm) and the project dependencies (bower) :
  
 ```shell
-$ npm install && bower install
+$ npm install && gulp init
 ```
  
 Availables gulp commands :

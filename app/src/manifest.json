@@ -1,10 +1,10 @@
 {
   "app_info": {
-    "name": "Launcher HTML5 Crédit Agricole",
+    "name": "<%%=displayName%>",
     "author": "Kiwapp",
     "codename": "0.0.1",
     "author_email": "contact@kiwapp.com",
-    "description": "L'application launcher HTML5 réalisé pour le Crédit Agricole. Elle est utilisée dans le cadre de la digitalisation des agences"
+    "description": "<%%=description%>"
   },
   "config": {
     "typedef": {},

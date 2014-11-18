@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('boilerplateKiwappSetup', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngBabelfish', 'ui.router', 'kiwapp.api'])
+angular.module('kiwappSetup', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngBabelfish', 'ui.router', 'kiwapp.api'])
     .controller('MainCtrl', require('./controllers/MainCtrl'))
     .factory('AppInstanceFactory', require('./factory/appInstanceFactory'))
 

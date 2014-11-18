@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('boilerplateKiwapp', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ngBabelfish'])
+angular.module('<%%=applicationName%>', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ngBabelfish'])
     .controller('MainCtrl', require('./controllers/MainCtrl'))
     .config(function ($stateProvider, $urlRouterProvider, babelfishProvider) {
 

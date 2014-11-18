@@ -31,6 +31,9 @@ gulp.task('zip', require('./tasks/zip'));
 // Build your i18n files
 gulp.task('i18n', require('./tasks/i18n'));
 
+// Init task is use when you start the project (ro when you run the npm install command)
+gulp.task('init', require('./tasks/init'));
+
 /*******
  * Main TASKS
  */

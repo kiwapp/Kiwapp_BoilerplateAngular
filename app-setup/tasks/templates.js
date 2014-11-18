@@ -7,7 +7,7 @@ module.exports = function() {
     return gulp.src('./src/scripts/**/*.html')
         .pipe(htmlify())
         .pipe(templateCache('templates.js', {
-            module: 'boilerplateKiwappSetup'
+            module: 'kiwappSetup'
         }))
         .pipe(gulp.dest('./build/js'));
 }

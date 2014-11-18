@@ -2,8 +2,15 @@
 /*@ngInject*/
 module.exports = function ($scope, appInstanceDataApi, AppInstanceData) {
 
+    var keyAppInstanceData = "app-params"
+
     // Use JSON.stringify and parse, this will be prettify the JSON
-    $scope.text = JSON.stringify(JSON.parse(AppInstanceData.data[0].data),null, 4);
+    var dataAppInstance = appInstanceDataApi.get(keyAppInstanceData);
+    if(dataAppInstance !== undefined) {
+        $scope.text = JSON.stringify(JSON.parse(appInstanceDataApi.get(keyAppInstanceData).data),null, 4);
+    } else {
+        $scope.text = "{}";
+    }
 
     // Watch the text model
     $scope.$watch('text', function(newValue) {
@@ -23,7 +30,7 @@ module.exports = function ($scope, appInstanceDataApi, AppInstanceData) {
     $scope.save = function() {
         $scope.configForm.$setSubmitted(true);
         $scope.configForm.$setDirty(false);
-        appInstanceDataApi.update(JSON.stringify(JSON.parse($scope.text)), 'app-params');
+        appInstanceDataApi.save(JSON.stringify(JSON.parse($scope.text)), keyAppInstanceData);
     };
 
     /**

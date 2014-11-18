@@ -19,7 +19,8 @@
         "angular-sanitize": "1.3.x",
         "angular-ui-router": "0.2.x",
         "pace": "1.0.x ",
-        "ngBabelfish": "~1.7.1"
+        "ngBabelfish": "~1.7.1",
+        "KiwappAPI_AccessLib" : "git@github.com:procheo/KiwappAPI_AccessLib.git"
     },
     "resolutions": {
         "angular": "1.2.23"

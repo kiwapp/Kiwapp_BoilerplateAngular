@@ -17,7 +17,7 @@ module.exports = function () {
         appDepenpendencies + '/angular-touch/angular-touch.min.js',
         appDepenpendencies + '/angular-ui-router/release/angular-ui-router.min.js',
         appDepenpendencies + '/moment/moment.js',
-        appDepenpendencies + '/kiwapp-manager-api/bundle.js',
+        appDepenpendencies + '/KiwappAPI_AccessLib/dist/bundle.js',
         appDepenpendencies + '/pace/pace.min.js',
         appDepenpendencies + '/ngBabelfish/dist/bundle.js'
     ])

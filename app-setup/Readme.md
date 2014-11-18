@@ -1,4 +1,4 @@
-# Boilerplate AngularJS - (the micro backoffice application app-setup) 
+# The micro backoffice application app-setup 
  
 ## Why use a mbo app-setup?
 
@@ -59,7 +59,11 @@ Availables gulp commands :
     ```
     
     Your application will be available at the http://localhost:8080/build
-    For testing this Kiwapp api webservice use this url : http://localhost:8080/build/#/?clientId=WJtwi6gR82MezqpCqHVUxOUHM2qVWIdSsHpKNGCVIoaiPAVfhQ&clientSecret=9OF4wr7Xn3GBW8ilT51v1KUc3JMYZ3P9SuepVlmjp2UlbdH4iJ&appInstanceId=853&urlApi=http:%2F%2Fdev-gr.procheo.fr%2Fapi#%2F
+    
+    For testing this Kiwapp api webservice use this url : 
+    
+    http://localhost:8080/build/#/?clientId=WJtwi6gR82MezqpCqHVUxOUHM2qVWIdSsHpKNGCVIoaiPAVfhQ&clientSecret=9OF4wr7Xn3GBW8ilT51v1KUc3JMYZ3P9SuepVlmjp2UlbdH4iJ&appInstanceId=853&urlApi=http:%2F%2Fdev-gr.procheo.fr%2Fapi#%2F
+    
     -> explanation : the client id and the secret id are in the oauth_client table (KiwappCore database) the app instance id is in the table app instance and must match the oauth_client app instance id column. The url is the url of your dev VM. 
 
 

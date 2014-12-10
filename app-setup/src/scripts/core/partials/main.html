@@ -2,8 +2,8 @@
     <textarea ng-model="text" ng-change="update()"></textarea>
 
     <div class="bloc-valid">
-        <span class="config-info config-unsave" ng-if="configForm.$dirty && !configForm.$submitted && configForm.valid">{{i18n.msg_unsaved}}</span>
-        <span class="config-info config-save" ng-if="configForm.$dirty && configForm.$submitted && configForm.valid">{{i18n.msg_saved}}</span>
+        <span class="config-info config-unsave" ng-if="configForm.$dirty && !configForm.submitted && configForm.valid">{{i18n.msg_unsaved}}</span>
+        <span class="config-info config-save" ng-if="configForm.$dirty && configForm.submitted && configForm.valid">{{i18n.msg_saved}}</span>
         <span class="config-info config-invalid" ng-if="!configForm.valid">{{i18n.msg_json_invalid}}</span>
         <button type="button" ng-disabled="!configForm.valid" ng-click="save()">{{i18n.btn_save}}</button>
     </div>

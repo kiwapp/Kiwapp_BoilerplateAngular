@@ -14,7 +14,7 @@ module.exports = function ($scope, appInstanceDataApi, AppInstanceData) {
 
     // Watch the text model
     $scope.$watch('text', function(newValue) {
-
+        $scope.configForm.submited = false;
         // Check if the text is JSON or empty or undefined
         if(newValue !== undefined && newValue != "" && !isJsonString(newValue)) {
             $scope.configForm.valid = false;
@@ -28,7 +28,7 @@ module.exports = function ($scope, appInstanceDataApi, AppInstanceData) {
      * Save the data
      */
     $scope.save = function() {
-        $scope.configForm.$setSubmitted(true);
+        $scope.configForm.submited = true;
         $scope.configForm.$setDirty(false);
         appInstanceDataApi.save(JSON.stringify(JSON.parse($scope.text)), keyAppInstanceData);
     };

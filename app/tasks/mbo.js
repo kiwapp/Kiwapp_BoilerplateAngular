@@ -1,4 +1,5 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    config = require('../GulpConfig');
 
 /**
  * Move the microbackoffice setup into the build file

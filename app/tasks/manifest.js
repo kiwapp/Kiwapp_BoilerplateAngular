@@ -1,6 +1,7 @@
 var gulp    = require('gulp'),
     jeditor = require("gulp-json-editor"),
-    gutil   = require('gulp-util');
+    gutil   = require('gulp-util'),
+    config = require('../GulpConfig');
 
 /**
  * Update the manifest for an app
@@ -25,7 +26,7 @@ module.exports = function() {
             return json; // must return JSON object.
         }))
         .pipe(gulp.dest("./src"))
-        .pipe(gulp.dest("./build"));
+        .pipe(gulp.dest(config.dist));
 
     // Build your package .json
     gulp.src(['./package.json',  './bower.json'])

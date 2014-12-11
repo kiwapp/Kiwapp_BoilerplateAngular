@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    config = require('../GulpConfig');
 
 /**
  * Concat your dependencies (js or css)
@@ -11,7 +12,7 @@ module.exports = function () {
 
     // The css dependencies
     gulp.src(appDepenpendencies + '/bootstrap/dist/css/bootstrap.css')
-        .pipe(gulp.dest('build/styles'));
+        .pipe(gulp.dest(config.dist + 'styles'));
 
     // The js dependencies
     return gulp.src([
@@ -27,6 +28,6 @@ module.exports = function () {
 
     ])
         .pipe(concat('vendor.min.js', {newLine: ';'}))
-        .pipe(gulp.dest('build/js'));
+        .pipe(gulp.dest(config.dist + 'js'));
 
 };

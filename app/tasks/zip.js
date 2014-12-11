@@ -10,7 +10,7 @@ module.exports = function () {
 
     // We take the name of the application (this name is saved in the env configuration run command.
     // You can find this variable in the task manifest
-    var zipname = gutil.env.name + '-' + gutil.env.version + '.zip'
+    var zipname = gutil.env.name + '-' + gutil.env.version + '.zip';
     gutil.env.zipname = zipname;
 
     return gulp.src(config.dist + '**/*')

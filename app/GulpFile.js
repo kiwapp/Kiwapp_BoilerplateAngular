@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
-    connect = require('gulp-connect');
+    connect = require('gulp-connect'),
+    config = require('./GulpConfig');
 
 // Build your vendors
 gulp.task('vendor', require("./tasks/vendor"));
@@ -34,12 +35,21 @@ gulp.task('i18n', require('./tasks/i18n'));
 // Init task is use when you start the project (ro when you run the npm install command)
 gulp.task('init', require('./tasks/init'));
 
+// Init task is use when you start the project (ro when you run the npm install command)
+gulp.task('upload', require('./tasks/upload'));
+
+
 /*******
  * Main TASKS
  */
 // PRODUCTION Build, mbo + zip + build
 gulp.task('prod', ['mbo', 'dev', 'manifest'], function () {
     gulp.start('zip');
+});
+
+// Creat a zip and upload the application on the manager
+gulp.task('deploy', ['prod'], function () {
+    gulp.start('upload');
 });
 
 // Dev build

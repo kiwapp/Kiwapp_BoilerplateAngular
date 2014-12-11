@@ -4,7 +4,8 @@ var path        = require("path"),
     concat      = require("gulp-concat"),
     convert     = require('gulp-convert'),
     tap         = require('gulp-tap'),
-    streamqueue = require('streamqueue');
+    streamqueue = require('streamqueue'),
+    config = require('../GulpConfig');
 
 /**
  * Build a languages.json from our Yaml files from
@@ -61,5 +62,5 @@ module.exports = function() {
             to: "json"
         }))
         .pipe(concat('languages.json'))
-        .pipe(gulp.dest("./build/i18n/"))
+        .pipe(gulp.dest(config.dist + "i18n/"));
 };

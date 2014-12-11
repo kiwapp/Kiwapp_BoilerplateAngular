@@ -10,7 +10,7 @@ module.exports = function() {
     return gulp.src('./src/scripts/**/*.html')
         .pipe(htmlify())
         .pipe(templateCache('templates.js',{
-            module: 'test'
+            module: '<%%=applicationName%>'
         }))
         .pipe(gulp.dest(config.dist + 'js'));
 }

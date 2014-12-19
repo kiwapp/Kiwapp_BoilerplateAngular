@@ -79,6 +79,15 @@ Availables gulp commands :
     
     Your application will be available at the http://localhost:8080/build
     
+- Deploy a zip file on the Kiwapp manager
+
+    ```shell
+    $ gulp deploy
+    ```
+    
+    Your application will be deployed on the Kiwapp manager
+    The configuration for the deployement is in the GulpConfig file
+    
 ### Translation
 
 For the translation we use the babelfish module (https://github.com/dhoko/angular-ngBabelfish)

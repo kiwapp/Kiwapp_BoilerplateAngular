@@ -1,22 +1,22 @@
 'use strict';
 /*@ngInject*/
-module.exports = function ($scope, appInstanceDataApi, AppInstanceData) {
+module.exports = function ($scope, appInstanceDataApi) {
 
-    var keyAppInstanceData = "app-params"
+    var keyAppInstanceData = 'app-params';
 
     // Use JSON.stringify and parse, this will be prettify the JSON
     var dataAppInstance = appInstanceDataApi.get(keyAppInstanceData);
     if(dataAppInstance !== undefined) {
         $scope.text = JSON.stringify(JSON.parse(appInstanceDataApi.get(keyAppInstanceData).data),null, 4);
     } else {
-        $scope.text = "{}";
+        $scope.text = '{}';
     }
 
     // Watch the text model
     $scope.$watch('text', function(newValue) {
         $scope.configForm.submited = false;
         // Check if the text is JSON or empty or undefined
-        if(newValue !== undefined && newValue != "" && !isJsonString(newValue)) {
+        if(newValue !== undefined && newValue !== '' && !isJsonString(newValue)) {
             $scope.configForm.valid = false;
         } else {
             $scope.configForm.valid = true;

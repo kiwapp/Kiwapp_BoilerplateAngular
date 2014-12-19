@@ -1,6 +1,7 @@
 var fs = require('fs'),
     gulp = require('gulp'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    config = require('../GulpConfig');
 
 /**
  * Build vendor, Concat and build our dependencies
@@ -22,6 +23,6 @@ module.exports = function () {
         appDepenpendencies + '/ngBabelfish/dist/bundle.js'
     ])
         .pipe(concat('vendor.min.js', {newLine: ';'}))
-        .pipe(gulp.dest('build/js'));
+        .pipe(gulp.dest(config.dist + 'js'));
 
 };

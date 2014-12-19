@@ -12,9 +12,9 @@ angular.module('kiwappSetup', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngBabelfis
                 templateUrl: 'core/partials/main.html',
                 controller: 'MainCtrl',
                 resolve: {
-                    AppInstanceData: ["AppInstanceFactory", function (AppInstanceFactory) {
-                        console.log("Resolution in progress...");
-                        return AppInstanceFactory.load()
+                    AppInstanceData: ['AppInstanceFactory', function (AppInstanceFactory) {
+                        console.log('Resolution in progress...');
+                        return AppInstanceFactory.load();
                     }]
                 }});
 
@@ -22,10 +22,10 @@ angular.module('kiwappSetup', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngBabelfis
 
         // Init the babelfish module for the translation
         babelfishProvider.init({
-            state: "home",
-            lang: "en-EN",
-            url: "i18n/languages.json",
-            namespace: "i18n",
+            state: 'home',
+            lang: 'en-EN',
+            url: 'i18n/languages.json',
+            namespace: 'i18n',
             lazy: false
         });
     })

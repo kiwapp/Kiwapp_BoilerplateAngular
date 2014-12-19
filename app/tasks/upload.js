@@ -5,9 +5,9 @@ var request = require('request'),
     fs = require('fs');
 
 /**
- * Move assets to build folder
- * Everythink except the favicon are moved in the asset folder
- * The favicon is copied in build root
+ * Upload the ziped file on the Kiwapp manager backoffice
+ * See the gulpConfig file for chang the parameters
+ *
  */
 module.exports = function() {
 

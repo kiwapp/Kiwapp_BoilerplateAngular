@@ -1,6 +1,7 @@
 var gulp = require('gulp'),
     sass = require("gulp-sass"),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    config = require('../GulpConfig');
 
 /**
  * Concat our CSS
@@ -8,7 +9,9 @@ var gulp = require('gulp'),
 module.exports = function () {
 
     return gulp.src('./src/styles/*.scss')
-        .pipe(sass())
+        .pipe(sass({
+            errLogToConsole: true
+        }))
         .pipe(concat('main.css'))
-        .pipe(gulp.dest('./build/styles/'));
+        .pipe(gulp.dest(config.dist + 'styles/'));
 };

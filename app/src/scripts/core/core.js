@@ -3,7 +3,6 @@
 angular.module('<%%=applicationName%>', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ngBabelfish'])
     .controller('MainCtrl', require('./controllers/MainCtrl'))
     .config(function ($stateProvider, $urlRouterProvider, babelfishProvider) {
-
         /**
          * Angular application configuration
          */
@@ -21,16 +20,16 @@ angular.module('<%%=applicationName%>', ['ngAnimate', 'ngTouch', 'ngSanitize', '
          */
 
         // No rotation (this application is mode landscape only)
-        Kiwapp.rotate(0);
+        Kiwapp.rotate('landscape');
 
         /**
          * The provider the the traductor module (we use here babelfish)
          */
         babelfishProvider.init({
-            state: "home",
-            lang: "fr-FR",
-            url: "i18n/languages.json",
-            namespace: "i18n",
+            state: 'home',
+            lang: 'fr-FR',
+            url: 'i18n/languages.json',
+            namespace: 'i18n',
             lazy: false
         });
 

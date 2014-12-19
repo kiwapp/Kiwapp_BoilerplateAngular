@@ -1,6 +1,7 @@
-var gulp   = require('gulp');
+var gulp   = require('gulp'),
+    config = require('../GulpConfig');
 
 module.exports = function() {
     return gulp.src('./src/**.*')
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest(config.dist));
 };

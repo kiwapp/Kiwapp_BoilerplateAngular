@@ -1,9 +1,10 @@
-var gulp = require('gulp');
+var gulp = require('gulp'),
+    config = require('../GulpConfig');
 
 /**
  * Move assets to build
  */
-module.exports = function() {
+module.exports = function () {
     return gulp.src(['./src/assets/**/*'])
-        .pipe(gulp.dest('./build/assets/'));
+        .pipe(gulp.dest(config.dist + 'assets/'));
 };

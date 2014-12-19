@@ -1,6 +1,7 @@
 var gulp        = require('gulp'),
     htmlify = require('gulp-angular-htmlify'),
-    templateCache = require('gulp-angular-templatecache');
+    templateCache = require('gulp-angular-templatecache'),
+    config = require('../GulpConfig');
 
 
 module.exports = function() {
@@ -9,5 +10,5 @@ module.exports = function() {
         .pipe(templateCache('templates.js', {
             module: 'kiwappSetup'
         }))
-        .pipe(gulp.dest('./build/js'));
+        .pipe(gulp.dest(config.dist + 'js'));
 }

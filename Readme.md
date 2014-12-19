@@ -13,7 +13,7 @@ But you can also create a customizable application, and add an application for s
  
  <a href="app-setup/Readme.md">See the app-setup Readme</a>
  
- - For the data visualization add a folder named : 'app-setup' in your zip
+ - For the data visualization add a folder named : 'app-databrowser' in your zip
  
  In this application you haven't any data visualisation
  

@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     connect = require('gulp-connect'),
+    gutil   = require('gulp-util'),
     config = require('./GulpConfig');
 
 // Build your vendors
@@ -11,8 +12,11 @@ gulp.task('templates', require('./tasks/templates'));
 // Build my css (with sass compilation
 gulp.task('styles', require('./tasks/styles'));
 
+// Check if the code is correct
+gulp.task('lint', require('./tasks/lint'));
+
 // Concat all file js in script (with bowerify // use require)
-gulp.task('scripts', require('./tasks/scripts'));
+gulp.task('scripts', ['lint'], require('./tasks/scripts'));
 
 // Move index
 gulp.task('index', require("./tasks/index"));
@@ -38,12 +42,16 @@ gulp.task('init', require('./tasks/init'));
 // Init task is use when you start the project (ro when you run the npm install command)
 gulp.task('upload', require('./tasks/upload'));
 
+// Set the env config to production
+gulp.task('envProd', function() {
+    gutil.env.type = 'production';
+});
 
 /*******
  * Main TASKS
  */
 // PRODUCTION Build, mbo + zip + build
-gulp.task('prod', ['mbo', 'dev', 'manifest'], function () {
+gulp.task('prod', ['envProd', 'mbo', 'dev', 'manifest'], function () {
     gulp.start('zip');
 });
 

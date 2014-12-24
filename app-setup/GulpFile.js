@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    gutil   = require('gulp-util'),
     connect = require('gulp-connect');
 
 
@@ -11,8 +12,11 @@ gulp.task('templates', require('./tasks/templates'));
 // Build my css (with sass compilation
 gulp.task('styles', require('./tasks/styles'));
 
+// Check if the code is correct
+gulp.task('lint', require('./tasks/lint'));
+
 // Concat all file js in script (with bowerify // use require)
-gulp.task('scripts', require('./tasks/scripts'));
+gulp.task('scripts', ['lint'], require('./tasks/scripts'));
 
 // Move index
 gulp.task('index', require("./tasks/index"));
@@ -23,12 +27,17 @@ gulp.task('assets', require('./tasks/assets'));
 // Build your i18n files
 gulp.task('i18n', require('./tasks/i18n'));
 
+// Set the env config to production
+gulp.task('envProd', function() {
+    gutil.env.type = 'production';
+});
+
 /*******
  * Main TASKS
  */
 
-// PRODUCTION Build, no zippig because this application is a mbo
-gulp.task('prod', ['dev']);
+// PRODUCTION Build, no zipping because this application is a mbo
+gulp.task('prod', ['envProd', 'dev']);
 
 // Dev build
 gulp.task('dev', ['index', 'assets', 'vendor', 'templates', 'i18n', 'styles', 'scripts']);

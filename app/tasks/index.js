@@ -1,9 +1,10 @@
-var gulp   = require('gulp');
+var gulp   = require('gulp'),
+    config = require('../GulpConfig');
 
 /**
  * Simply move the index.html file into the build folder
  */
 module.exports = function() {
     return gulp.src('./src/**.*')
-        .pipe(gulp.dest('./build/'));
+        .pipe(gulp.dest(config.dist));
 };

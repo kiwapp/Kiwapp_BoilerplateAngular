@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     concat = require('gulp-concat'),
+    streamqueue = require('streamqueue'),
     config = require('../GulpConfig');
 
 /**
@@ -10,24 +11,30 @@ module.exports = function () {
     // Folder with all dependencies
     var appDepenpendencies = './src/vendor';
 
-    // The css dependencies
-    gulp.src(appDepenpendencies + '/bootstrap/dist/css/bootstrap.css')
-        .pipe(gulp.dest(config.dist + 'styles'));
+    var stream = streamqueue({objectMode: true});
+    stream.queue(
+        // The css dependencies
+        gulp.src(appDepenpendencies + '/bootstrap/dist/css/bootstrap.css')
+            .pipe(gulp.dest(config.dist + 'styles'))
+    );
 
-    // The js dependencies
-    return gulp.src([
-        appDepenpendencies + '/angular/angular.min.js',
-        appDepenpendencies + '/angular-animate/angular-animate.min.js',
-        appDepenpendencies + '/angular-sanitize/angular-sanitize.min.js',
-        appDepenpendencies + '/angular-touch/angular-touch.min.js',
-        appDepenpendencies + '/angular-ui-router/release/angular-ui-router.min.js',
-        appDepenpendencies + '/moment/moment.js',
-        appDepenpendencies + '/kiwapp.js/kiwapp.js',
-        appDepenpendencies + '/angular-bootstrap/ui-bootstrap-tpls.min.js',
-        appDepenpendencies + '/ngBabelfish/dist/bundle.js'
+    stream.queue(
+        // The js dependencies
+        gulp.src([
+            appDepenpendencies + '/angular/angular.min.js',
+            appDepenpendencies + '/angular-animate/angular-animate.min.js',
+            appDepenpendencies + '/angular-sanitize/angular-sanitize.min.js',
+            appDepenpendencies + '/angular-touch/angular-touch.min.js',
+            appDepenpendencies + '/angular-ui-router/release/angular-ui-router.min.js',
+            appDepenpendencies + '/moment/moment.js',
+            appDepenpendencies + '/kiwapp.js/kiwapp.js',
+            appDepenpendencies + '/angular-bootstrap/ui-bootstrap-tpls.min.js',
+            appDepenpendencies + '/ngBabelfish/dist/bundle.js'
 
-    ])
-        .pipe(concat('vendor.min.js', {newLine: ';'}))
-        .pipe(gulp.dest(config.dist + 'js'));
+        ])
+            .pipe(concat('vendor.min.js', {newLine: ';'}))
+            .pipe(gulp.dest(config.dist + 'js'))
+    );
 
+    return stream.done();
 };

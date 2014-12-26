@@ -16,8 +16,22 @@ var appToken = "123456";
  */
 var dist = "./build/";
 
+/**
+ * The application name
+ * @type {string}
+ */
+var appName = "<%%=applicationName%>";
+
+/**
+ * The default port where the livereload application is launched
+ * @type {number}
+ */
+var defaultPort = 8080;
+
 module.exports = {
     urlApi: urlApi,
     appToken: appToken,
-    dist: dist
+    dist: dist,
+    appName: appName,
+    defaultPort: defaultPort
 }

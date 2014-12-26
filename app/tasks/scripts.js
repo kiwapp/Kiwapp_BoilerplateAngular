@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     gutil = require('gulp-util');
 
 /**
- * Create a single file app.js with all js dependencies (we use bowerify who read the require word in file for making the link between files)
+ * Create a single file app.js with all js dependencies (we use bowserify who read the require word in file for making the link between files)
  */
 module.exports = function () {
 
@@ -21,7 +21,7 @@ module.exports = function () {
     return bundler
         .bundle()
         .on('error', function(err){
-            this.end();
+            this.emit('end');
         })
         .pipe(source('app.js'))
         .pipe(buffer())

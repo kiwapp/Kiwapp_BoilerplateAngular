@@ -21,7 +21,7 @@ module.exports = function () {
     return bundler
         .bundle()
         .on('error', function(err){
-            this.end();
+            this.emit('end');
         })
         .pipe(source('app.js'))
         .pipe(buffer())

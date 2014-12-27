@@ -47,7 +47,7 @@ gulp.task('serve', ['dev', 'watch'], function () {
     connect.server({
         root: '',
         livereload: true,
-        port: 8080
+        port: (gutil.env.p?gutil.env.p:config.defaultPort)
     });
 });
 

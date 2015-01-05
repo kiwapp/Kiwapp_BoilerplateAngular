@@ -1,33 +1,26 @@
 {
-    "name": "<%%=displayName%>",
-    "version": "0.0.1",
-    "homepage": "https://github.com/procheo/<%%=applicationName%>/app",
-    "authors": ["kiwapp <contact@kiwapp.com>"],
-    "license": "MIT",
-    "private": true,
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "src/vendor",
-        "test",
-        "tests"
-    ],
-    "dependencies": {
-        "moment": "~2.8.1",
-        "angular": "1.3.x",
-        "jquery": "2.x.x",
-        "angular-animate": "1.3.x",
-        "angular-touch": "1.3.x",
-        "angular-sanitize": "1.3.x",
-        "angular-ui-router": "0.2.x",
-        "bootstrap-sass-official": "3.2.x",
-        "kiwapp.js": "~1.4.6",
-        "angular-bootstrap": "~0.11.2",
-        "bootstrap": "~3.3.1",
-        "ngBabelfish": "~1.7.1"
-    },
-    "resolutions": {
-        "angular": "1.2.23"
-    }
+  "name": "<%%=displayName%>",
+  "version": "0.0.1",
+  "homepage": "https://github.com/procheo/<%%=applicationName%>/app",
+  "authors": ["kiwapp <contact@kiwapp.com>"],
+  "license": "MIT",
+  "private": true,
+  "ignore": ["**/.*", "node_modules", "bower_components", "src/vendor", "test", "tests"],
+  "dependencies": {
+    "moment": "~2.8.1",
+    "angular": "1.3.x",
+    "jquery": "2.x.x",
+    "angular-animate": "1.3.x",
+    "angular-touch": "1.3.x",
+    "angular-sanitize": "1.3.x",
+    "angular-ui-router": "0.2.x",
+    "bootstrap-sass-official": "3.2.x",
+    "kiwapp.js": "~1.4.6",
+    "angular-bootstrap": "~0.11.2",
+    "bootstrap": "~3.3.1",
+    "ngBabelfish": "~1.7.1"
+  },
+  "resolutions": {
+    "angular": "1.2.23"
+  }
 }

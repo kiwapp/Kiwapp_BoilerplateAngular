@@ -2,7 +2,7 @@
   "app_info": {
     "name": "<%%=displayName%>",
     "author": "Kiwapp",
-    "codename": "0.0.1",
+    "codename": "1.1.0",
     "author_email": "contact@kiwapp.com",
     "description": "<%%=description%>"
   },

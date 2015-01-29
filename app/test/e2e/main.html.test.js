@@ -1,7 +1,9 @@
 describe('main', function() {
-    after
+
     it('should load the page', function() {
-        title = element(By.tagName("span")).getText()
-        expect(title).toBe("Bienvenue sur le boilerplate pour les applications AngularJS");
+        browser.get('http://localhost:8080/build');
+        browser.getTitle().then(function(title) {
+            expect(title).toBe('<%%=displayName%>');
+        });
     });
 });

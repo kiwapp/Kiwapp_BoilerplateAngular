@@ -36,11 +36,15 @@ var appName = "<%%=applicationName%>";
  */
 var projectsDependencies = [
     {
-        'project' : '../../app-setup/GulpFile.js',
+        'dest': 'app-setup',
+        'project' : '../../app-setup/build/',
+        'projectGulp' : '../../app-setup/GulpFile.js',
         'task': 'prod'
     },
     {
-        'project' : '../../app-databrowser/GulpFile.js',
+        'dest': 'app-databrowser',
+        'project' : '../../app-databrowser/build/',
+        'projectGulp' : '../../app-databrowser/GulpFile.js',
         'task': 'prod'
     }
 ];

@@ -27,7 +27,7 @@ angular.module('<%%=applicationName%>', ['ngAnimate', 'ngTouch', 'ngSanitize', '
          */
         babelfishProvider.init({
             state: 'home',
-            lang: 'fr-FR',
+            lang: 'en-EN',
             url: 'i18n/languages.json',
             namespace: 'i18n',
             lazy: false

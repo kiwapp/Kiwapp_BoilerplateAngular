@@ -63,6 +63,15 @@ var jsVendors = [
 var cssVendors = [];
 
 /**
+ * List of the custom task used for this project
+ * The custom tasks are the task special for your project
+ * In a normal case leave this array empty
+ * This task will be launch in the dev, prod, serve and cserve build
+ * @type {Array}
+ */
+var customTasks = [];
+
+/**
  * The default port where the application is launched
  * @type {number}
  */
@@ -77,5 +86,6 @@ module.exports = {
     jsVendors: jsVendors,
     cssVendors: cssVendors,
     appName: appName,
+    customTasks: customTasks,
     defaultPort: defaultPort
 };

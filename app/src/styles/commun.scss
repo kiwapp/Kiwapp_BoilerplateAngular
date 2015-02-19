@@ -1,0 +1,18 @@
+body{
+    // Set the background webview to white (Kiwapp requirement)
+    background: white;
+}
+
+// The wrapper for all the contents, position absolute top, left, right, bottom 0 will put this div in full screen mode
+.wrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.container {
+    margin-top:200px;
+}
+

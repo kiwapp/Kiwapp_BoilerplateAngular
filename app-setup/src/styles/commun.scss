@@ -1,0 +1,73 @@
+body {
+    background: white;
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    margin: 0 8px 0 0;
+}
+
+h1 {
+    font-size: 1.2em;
+}
+
+form textarea {
+    width: 100%;
+    height: 500px;
+    border-color: rgba(243, 161, 69, 0.9);
+}
+
+form button {
+    float: right;
+    appearance: none;
+    background: rgba(243, 161, 69, 0.9);
+    border: 0;
+    color: #ffffff;
+    padding: 6px 12px;
+    line-height: 1.42857143;
+    border-radius: 4px;
+    position: relative;
+    left: 8px;
+    transition: all 0.2s ease;
+}
+
+.bloc-valid {
+    float: right;
+}
+
+.bloc-valid span {
+    position: relative;
+    top: 5px;
+    right: 5px;
+}
+
+form button:hover, form button:active, form button:focus {
+    border-color: #9b5f18;
+    background-color: #ea8b2d;
+}
+
+form button:disabled {
+    border-color: rgba(243, 161, 69, 0.5);
+    background-color: rgba(243, 161, 69, 0.5);
+}
+
+.config-info {
+    padding: 0px 10px 0px 25px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    position: relative;
+    top:2px;
+}
+
+.config-save {
+    background-image: url('../assets/valid.png');
+    color: #11b0b0;
+}
+
+.config-unsave {
+    background-image: url('../assets/warning.png');
+    color: red;
+}
+
+.config-invalid {
+    background-image: url('../assets/warning.png');
+    color: red;
+}

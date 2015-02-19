@@ -1,0 +1,6 @@
+[submodule "app/Kiwapp_GulpFile"]
+	path = app/Kiwapp_GulpFile
+	url = git@github.com:procheo/Kiwapp_GulpFile.git
+[submodule "app-setup/Kiwapp_GulpFile"]
+	path = app-setup/Kiwapp_GulpFile
+	url = git@github.com:procheo/Kiwapp_GulpFile.git

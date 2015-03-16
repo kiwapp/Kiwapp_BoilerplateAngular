@@ -2,7 +2,7 @@
 
 ## The available commands 
  
-  <a href="https://github.com/procheo/Kiwapp_GulpFile/blob/master/README.md">See the Kiwapp GulpFile Readme</a>
+  <a href="https://github.com/kiwapp/Kiwapp_GulpFile/blob/master/README.md">See the Kiwapp GulpFile Readme</a>
   
 ## The application
  

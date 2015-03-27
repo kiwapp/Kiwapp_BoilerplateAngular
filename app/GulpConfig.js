@@ -14,13 +14,13 @@ var appToken = "123456";
  * The destination folder you want yours built resources have been
  * @type {string}
  */
-var dist = "../build/";
+var dist = "./build/";
 
 /**
  * The project sources folders
  * @type {string}
  */
-var project = "../";
+var project = "./";
 
 /**
  * The application name (in min case)
@@ -34,20 +34,7 @@ var appName = "<%%=applicationName%>";
  * The order is important
  * @type {Array}
  */
-var projectsDependencies = [
-    {
-        'dest': 'app-setup',
-        'project' : '../../app-setup/build/',
-        'projectGulp' : '../../app-setup/GulpFile.js',
-        'task': 'prod'
-    },
-    {
-        'dest': 'app-databrowser',
-        'project' : '../../app-databrowser/build/',
-        'projectGulp' : '../../app-databrowser/GulpFile.js',
-        'task': 'prod'
-    }
-];
+var projectsDependencies = 
 
 /**
  * List all libraries js dependencies
@@ -55,27 +42,6 @@ var projectsDependencies = [
  * The link to vendor.js is already write into the index.html file
  * @type {*[]}
  */
-var jsVendors = [
-    project + 'src/vendor/angular/angular.min.js',
-    project + 'src/vendor/angular-animate/angular-animate.min.js',
-    project + 'src/vendor/angular-sanitize/angular-sanitize.min.js',
-    project + 'src/vendor/angular-touch/angular-touch.min.js',
-    project + 'src/vendor/angular-ui-router/release/angular-ui-router.min.js',
-    project + 'src/vendor/moment/moment.js',
-    project + 'src/vendor/kiwapp.js/kiwapp.js',
-    project + 'src/vendor/angular-bootstrap/ui-bootstrap-tpls.min.js',
-    project + 'src/vendor/ngBabelfish/dist/bundle.js'
-
-];
-
-/**
- * List all libraries css dependencies,
- * They will be copied in the build/style folder so you must make a link to them into your index.html file
- * @type {*[]}
- */
-var cssVendors = [
-    project + 'src/vendor/bootstrap/dist/css/bootstrap.min.css'
-];
 
 /**
  * The default port where the application is launched
@@ -89,8 +55,6 @@ module.exports = {
     dist: dist,
     project: project,
     projectsDependencies: projectsDependencies,
-    jsVendors: jsVendors,
-    cssVendors: cssVendors,
     appName: appName,
     defaultPort: defaultPort
 };

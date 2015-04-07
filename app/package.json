@@ -6,26 +6,21 @@
     "gulp": "*"
   },
   "scripts": {
-    "prod": "gulp --gulpfile ~/Projets/Kiwapp_GulpFile/GulpFile.js prod",
-  	"serve": "gulp --gulpfile ~/Projets/Kiwapp_GulpFile/GulpFile.js serve",
-  	"test":"echo hey"
+    "task": "gulp --gulpfile ~/Projets/Kiwapp_GulpFile/GulpFile.js task"
   },
   "urlApi": "https://api.kiwapp.com/nosecure/appInstance/",
   "appToken": "123456",
   "dist": "./build/",
-  "projectsDependencies": [
-	    {
-	        "dest": "app-setup",
-	        "project" : "../../app-setup/build/",
-	        "projectGulp" : "../../app-setup/GulpFile.js",
-	        "task": "prod"
-	    },
-	    {
-	        "dest": "app-databrowser",
-	        "project" : "../../app-databrowser/build/",
-	        "projectGulp" : "../../app-databrowser/GulpFile.js",
-	        "task": "prod"
-	    }
-	],
+  "projectsDependencies": [{
+    "dest": "app-setup",
+    "project": "../../app-setup/build/",
+    "projectGulp": "../../app-setup/GulpFile.js",
+    "task": "prod"
+  }, {
+    "dest": "app-databrowser",
+    "project": "../../app-databrowser/build/",
+    "projectGulp": "../../app-databrowser/GulpFile.js",
+    "task": "prod"
+  }],
   "defaultPort": 8080
 }

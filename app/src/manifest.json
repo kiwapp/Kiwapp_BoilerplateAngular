@@ -9,7 +9,7 @@
       "1.0.0": ["Your release note here"]
     },
     "version": "1.0.1",
-    "build_version": 22
+    "build_version": 26
   },
   "config": {
     "typedef": {},

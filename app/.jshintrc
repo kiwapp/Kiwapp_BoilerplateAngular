@@ -21,6 +21,8 @@
     "validthis": true,
     "globals": {
         "angular": false,
-        "Kiwapp": false
+        "Kiwapp": false,
+        "document": false,
+        "window": false
     }
 }

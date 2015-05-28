@@ -1,4 +1,4 @@
-# <%%=displayName%>
+# testKarma
 
 ## Presentation
 
@@ -14,18 +14,15 @@ This boilerplate is use for create a new HTML5 application, with many interestin
 
 - Gulp compilation
 - Sass 
-- Bootstrap
 - moment
 - kiwapp.js
-- angular (angular core, angular router, angular sanitize, angular bootstrap, angular touch)
-- jquery
-- babelfish
+- angular (angular core, angular router, angular sanitize, angular touch)
+- angular translate
 - Karma (for the unit tests)
-- protractor (for the end to end tests)
 
 ### Translation
 
-For the translation we use the babelfish module (https://github.com/dhoko/angular-ngBabelfish)
+For the translation we use the angular translate module (https://angular-translate.github.io/)
 
 
 ## Release Note :

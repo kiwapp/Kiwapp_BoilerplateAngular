@@ -1,8 +1,29 @@
 'use strict';
 
-angular.module('<%%=applicationName%>', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ui.router', 'ui.bootstrap', 'ngBabelfish'])
+angular.module('<%%=applicationName%>', [
+    'ngAnimate',
+    'ngTouch',
+    'ngSanitize',
+    'ui.router',
+    'pascalprecht.translate'
+])
+    .constant('TIMEOUT', 60 * 1000) // 60 secs
     .controller('MainCtrl', require('./controllers/MainCtrl'))
-    .config(function ($stateProvider, $urlRouterProvider, babelfishProvider) {
+    .service('session', require('./services/session'))
+    .run(function (session, $state) {
+
+        session.init(function() {
+            $state.go('home');
+        });
+
+        /**
+         * Android keyboard
+         */
+        // With this lines you correct the android keyboard comportment for the form
+        document.getElementsByTagName('body')[0].style.height = window.innerHeight + 'px';
+        document.getElementsByTagName('html')[0].style.height = window.innerHeight+ 'px';
+    })
+    .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
         /**
          * Angular application configuration
          */
@@ -22,17 +43,12 @@ angular.module('<%%=applicationName%>', ['ngAnimate', 'ngTouch', 'ngSanitize', '
         // No rotation (this application is mode landscape only)
         Kiwapp.rotate('landscape');
 
-        /**
-         * The provider the the traductor module (we use here babelfish)
-         */
-        babelfishProvider.init({
-            state: 'home',
-            lang: 'en-EN',
-            url: 'i18n/languages.json',
-            namespace: 'i18n',
-            lazy: false
+        $translateProvider.useStaticFilesLoader({
+            prefix: 'i18n/',
+            suffix: '.json'
         });
-
+        $translateProvider.useSanitizeValueStrategy('escaped');
+        $translateProvider.preferredLanguage('en-EN');
     })
 ;
 

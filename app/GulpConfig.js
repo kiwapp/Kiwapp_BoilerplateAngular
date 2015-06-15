@@ -54,6 +54,12 @@ var projectsDependencies = [
         'project' : '../../app-setup/build/',
         'projectGulp' : '../../app-setup/GulpFile.js',
         'task': 'prod'
+    },
+    {
+        'dest': 'app-databrowser',
+        'project' : '../../app-databrowser/build/',
+        'projectGulp' : '../../app-databrowser/GulpFile.js',
+        'task': 'prod'
     }
 ];
 

@@ -44,12 +44,12 @@ a:hover {
     user-select:none;
 }
 
-input, textarea{
-    -webkit-touch-callout:default;
-    -webkit-user-select:text;
-    -moz-user-select:text;
-    -ms-user-select:text;
-    user-select:text;
+input, textarea {
+    -webkit-touch-callout: default;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
 }
 
 // The wrapper for all the contents, position absolute top, left, right, bottom 0 will put this div in full screen mode

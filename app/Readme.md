@@ -1,4 +1,4 @@
-# testKarma
+# <%%=displayName%>
 
 ## Presentation
 

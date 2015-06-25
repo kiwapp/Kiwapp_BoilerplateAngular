@@ -5,3 +5,4 @@ i18n/*.json
 doc/
 src/vendor/
 .idea/
+.DS_Store

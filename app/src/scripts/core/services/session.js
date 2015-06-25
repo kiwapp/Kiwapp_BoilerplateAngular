@@ -24,7 +24,7 @@ module.exports = function (TIMEOUT) {
 
             service.waiting = true;
 
-        }, SESSION_TIMEOUT, true);
+        }, TIMEOUT, true);
     }
 
     service.init = function init(callback) {

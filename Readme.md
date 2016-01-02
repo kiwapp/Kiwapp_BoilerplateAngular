@@ -1,5 +1,23 @@
 # AngularJS
 
+## Get and init the project
+
+Clone this project for init a new project (don't forget to remove the .git folder)
+
+Use the following command
+```shell
+$ git clone --recursive git@github.com:kiwapp/Kiwapp_BoilerplateAngular.git YOUR_PROJECT_FOLDER && cd YOUR_PROJECT_FOLDER && rm -rf .git
+```
+(the recursive option is for clone the submodule with the gulp task specific specially designed for Kiwapp)
+
+After that your repository with the instructions given by Github.com (git init . -> git add remote ...)
+
+## Install the project dependencies
+
+```shell
+$ cd YOUR_PROJECT_FOLDER && bower install
+```
+
 ## The available commands 
  
   <a href="https://github.com/kiwapp/Kiwapp_GulpFile/blob/master/README.md">See the Kiwapp GulpFile Readme</a>

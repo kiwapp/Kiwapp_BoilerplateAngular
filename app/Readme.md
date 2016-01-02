@@ -1,5 +1,3 @@
-# <%%=displayName%>
-
 ## Presentation
 
 This boilerplate is use for create a new HTML5 application, with many interesting stuff inside
@@ -38,7 +36,7 @@ Clone this project for init a new project (don't forget to remove the .git folde
 
 Use the following command
 ```shell
-$ git clone --recursive git@github.com:procheo/boilerplateAngular.git YOUR_PROJECT_FOLDER && cd YOUR_PROJECT_FOLDER && rm -rf .git
+$ git clone --recursive git@github.com:kiwapp/Kiwapp_BoilerplateAngular.git YOUR_PROJECT_FOLDER && cd YOUR_PROJECT_FOLDER && rm -rf .git
 ```
 (the recursive option is for clone the submodule with the gulp task specific specially designed for Kiwapp)
 
@@ -54,4 +52,4 @@ $ cd YOUR_PROJECT_FOLDER && bower install
 
  See the following README
  
- <a href="https://github.com/procheo/Kiwapp_GulpFile/blob/master/README.md">See the Kiwapp GulpFile Readme</a>
+ <a href="https://github.com/kiwapp/Kiwapp_GulpFile/blob/master/README.md">See the Kiwapp GulpFile Readme</a>

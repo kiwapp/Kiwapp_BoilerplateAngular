@@ -1,8 +1,15 @@
 /**
+ * The application name (in min case)
+ * @type {string}
+ */
+var appName = "My_Project";
+
+/**
  * The url for the api Kiwapp you want use
  * @type {string}
  */
 var urlApi = "https://api.kiwapp.com/nosecure/appInstance/";
+
 /**
  * The application token for this application
  * You must have manualy uploaded on the Manager once
@@ -36,11 +43,6 @@ var project = "../";
  */
 var translator = 'angular-translate';
 
-/**
- * The application name (in min case)
- * @type {string}
- */
-var appName = "<%%=applicationName%>";
 
 /**
  * List the project dependecies you want build
@@ -52,7 +54,7 @@ var projectsDependencies = [
     {
         'dest': 'app-setup',
         'project' : '../../app-setup/build/',
-        'projectGulp' : '../../app-setup/GulpFile.js',
+        'projectGulp' : '../../app-setup/Kiwapp_GulpFile/GulpFile.js',
         'task': 'prod'
     },
     {

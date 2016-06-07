@@ -1,76 +1,142 @@
-# AngularJS
+# Kiwapp Boilerplate
+##Presentation
 
-## Get and init the project
+This boilerplate can be used to create a new HTML5 application for Kiwapp.
 
-Clone this project for init a new project (don't forget to remove the .git folder)
+It includes a sample app for the device (app/ folder) and a sample backoffice interface to be integrated in the Kiwapp Manager (app-setup/ folder).
 
-Use the following command
-```shell
-$ git clone --recursive https://github.com/kiwapp/Kiwapp_BoilerplateAngular YOUR_PROJECT_FOLDER && cd YOUR_PROJECT_FOLDER && rm -rf .git && rm -rf app/Kiwapp_GulpFile/.git && rm -rf app-setup/Kiwapp_GulpFile/.git
-```
-(the recursive option clones the submodule with the gulp tasks specially designed for Kiwapp)
+Kiwapp Manager also supports an app-databrowser folder if you want to have an additionnal data-visualisation interface in the Manager, for an instance of this app. This project does not include a sample of this sub-app.
 
-You then need to init your git project :
-```shell
-git init .
-git add remote ...
-```
- your repository with the instructions given by Github.com (git init . -> git add remote ...)
+### app/
+The src/ folder already include a buid app-setup folder, which will provide a basic form that will be displayed in the Kiwapp Manager, on the app instance setup screen.
 
-## Install the project dependencies
+You can then add your application code in the src/ folder. Gulp will then prepare the files and put them in the build/ folder.
 
-```shell
-$ cd YOUR_PROJECT_FOLDER/app && bower install
-$ cd YOUR_PROJECT_FOLDER/app-setup && bower install
-```
-
-## Prepare Gulp Env
-
-```shell
-$ cd YOUR_PROJECT_FOLDER/app/Kiwapp_GulpFile && npm install
-$ cd YOUR_PROJECT_FOLDER/app-setup/Kiwapp_GulpFile && npm install
-```
-
-## Customize your project name
-
-Edit GulpConfig.js and change appName
-
-## Build for release
-```shell
-$ cd YOUR_PROJECT_FOLDER/app/Kiwapp_GulpFile
-$ gulp dependencies
-$ gulp prod --version XXX
-```
-
-gulp dependencies : builds the microbackoffice before being integrated in the app release Zip
-
-## The available commands
-
-  <a href="https://github.com/kiwapp/Kiwapp_GulpFile/blob/master/README.md">See the Kiwapp GulpFile Readme</a>
-
-## The application
-
- <a href="app/Readme.md">See the application Readme</a>
-
-## The three in one application (microback office application)
-
-In the Kiwapp environment, you can create a basic html5 application.
-But you can also create a customizable application, and add an application for some data visualisation.
-
- - For the customization add a folder named : 'app-setup' in your zip
-
- <a href="app-setup/Readme.md">See the app-setup Readme</a>
-
- - For the data visualization add a folder named : 'app-databrowser' in your zip
-
- In this application you haven't any data visualisation
-
-Important : When you want use a microback office application be careful to build your microback office application with :
-
-```shell
- $ gulp dependencies
-```
-
- before launch your gulp prod command
+### app-setup/
+The src/ folder includes the code needed for the app-setup. You can build your modification with Gulp and then copy the content of app-setup/build/ folder into app/serc/app-setup/ folder.
 
 
+## Get started
+
+### Requirements
+- node.js
+- npm
+
+### Init your project
+1. Clone this project to init a new project and ```cd``` into its folder
+2. Reinit the project (remove the existing .git folder and initialize git) : ```rm -rf .git && git init```
+
+### Start your app development
+1. Move in the app folder : ```cd app/```
+2. Install the JS dependencies with Bower : ```bower install```
+4. Install the required npm packets for Gulp : ```cd Kiwapp_Gulpfile/ && npm install ```
+5. Initialize the project name : ```gulp init```
+6. Run ```gulp serve``` and start your development. You will benefit from the live reload thanks to Gulp.
+
+
+## List available gulp commands :
+
+
+ - Launch qa build with the version specified in the manifest.json (this command line will build a .zip file with the resource under the build folder)
+
+    ```shell
+    $ gulp build
+    ```
+
+    or
+
+    ```shell
+    $ gulp
+    ```
+
+ - Launch a production build, commit, tag it and build
+
+    ```shell
+    $ gulp prod
+    ```
+
+
+- Launch a build with a version number (this command line will build a .zip file with the resource under the build folder)
+
+    ```shell
+    $ gulp prod --version 1.0.1
+    ```
+
+
+- Launch the dev build with the watcher and the livereload on the sources
+
+    ```shell
+    $ gulp serve
+    ```
+
+    Your application will be available at the http://localhost:8080/build
+
+- Launch the dev build with the watcher and the livereload on the sources and with a clean source just before the build (to be sure there are no residual file
+
+    ```shell
+    $ gulp cserve
+    ```
+
+    Your application will be available at the http://localhost:8080/build
+
+- Launch the unit test
+
+    ```shell
+    $ gulp test
+    ```
+
+    For install correctly karma and protractor see the next section
+
+- Deploy a zip file on the Kiwapp manager
+
+    ```shell
+    $ gulp deploy
+    ```
+
+    Your application will be deployed on the Kiwapp manager
+    The configuration for the deployment is in the GulpConfig file
+
+## Templates
+If your project use templates (custome content, scss variable, i18n, assets) you may want to use the --template option. The options take a path to the template folder. This folder use the same structure as the src folder.
+
+    ```shell
+    $ gulp serve --template ../templates/myTemplate/
+    ```
+
+    or
+    ```shell
+    $ gulp prod --template ../templates/myOtherTemplate/
+    ```
+
+
+## Custom Task
+
+You want do something only for your project your can add special task.
+
+Go into your GulpConfig.js and add the path to your task into the array 'customTasks'
+Your gulp serve, cserve, prod and dev task will run those task
+
+In your task you have to use the notation:
+
+var gulp = require(__dirname + '/Kiwapp_GulpFile/node_modules/gulp'),
+
+For require your module into the node_modules but you can also add a package.json file to your project root
+
+## BrowserSync usage
+
+We add to this tasks the browsersync plugins for front end developpement. You can access to the browsersync interface to http://localhost:3000 when your gulp serve is running
+
+
+## Included
+
+- Gulp compilation
+- Sass
+- moment
+- kiwapp.js
+- angular (angular core, angular router, angular sanitize, angular touch)
+- angular translate
+- Karma (for the unit tests)
+
+## Translation
+
+For the translation we use the angular translate module (https://angular-translate.github.io/)

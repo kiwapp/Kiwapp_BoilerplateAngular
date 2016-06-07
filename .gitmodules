@@ -1,6 +1,0 @@
-[submodule "app/Kiwapp_GulpFile"]
-	path = app/Kiwapp_GulpFile
-	url = https://github.com/kiwapp/Kiwapp_GulpFile.git
-[submodule "app-setup/Kiwapp_GulpFile"]
-	path = app-setup/Kiwapp_GulpFile
-	url = https://github.com/kiwapp/Kiwapp_GulpFile.git

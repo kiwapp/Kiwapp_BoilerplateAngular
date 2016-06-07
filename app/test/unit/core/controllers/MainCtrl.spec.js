@@ -1,6 +1,6 @@
 'use strict';
 describe('A suite', function() {
-    beforeEach(module('MyKiwappApp'));
+    beforeEach(module('<%%=applicationName%>'));
 
     var $controller;
 

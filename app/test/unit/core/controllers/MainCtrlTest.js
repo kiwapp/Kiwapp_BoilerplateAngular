@@ -1,6 +1,6 @@
 describe("MainCtrTest", function () {
     // Load the module
-    beforeEach(module('MyKiwappApp'));
+    beforeEach(module('<%%=applicationName%>'));
     var scope, controller;
 
     // Load the controller

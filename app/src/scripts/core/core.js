@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('MyKiwappApp', [
+angular.module('<%%=applicationName%>', [
     'ngAnimate',
     'ngTouch',
     'ngSanitize',

@@ -2,7 +2,7 @@
  * The application name (in min case)
  * @type {string}
  */
-var appName = "MyKiwappApp";
+var appName = "My_Project";
 
 /**
  * The url for the api Kiwapp you want use

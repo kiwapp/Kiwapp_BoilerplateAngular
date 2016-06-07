@@ -1,6 +1,7 @@
 {
-  "name": "my_kiwapp_app",
-  "version": "0.1",
+  "name": "<%%=displayName%>",
+  "version": "1.c",
+  "homepage": "https://github.com/procheo/<%%=applicationName%>/app",
   "authors": ["Kiwapp <contact@kiwapp.com>"],
   "license": "MIT",
   "private": true,

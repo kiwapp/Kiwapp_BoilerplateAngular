@@ -8,6 +8,7 @@ angular.module('MyKiwappApp', [
     'pascalprecht.translate'
 ])
     .constant('TIMEOUT', 60 * 1000) // 60 secs
+    .constant('AppInstanceParamsFromKwManager',Kiwapp.get().instanceParameters['app-params'])
     .controller('MainCtrl', require('./controllers/MainCtrl'))
     .service('session', require('./services/session'))
     .run(function (session, $state) {
